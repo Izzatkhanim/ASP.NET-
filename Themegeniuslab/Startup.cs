@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Repository.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Themegeniuslab
 {
@@ -24,6 +26,10 @@ namespace Themegeniuslab
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<ThemegeniuslabDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("Default"),
+            x => x.MigrationsAssembly("Repository")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
