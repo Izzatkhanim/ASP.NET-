@@ -2,7 +2,7 @@
 
 namespace Repository.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class BrandsModelAdded : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

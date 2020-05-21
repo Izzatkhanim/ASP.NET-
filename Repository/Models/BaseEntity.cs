@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Repository.Models
 {
-    public class BaseEntity
+    public abstract class BaseEntity
     {
         public int Id { get; set; }
         public bool Status { get; set; }

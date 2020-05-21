@@ -18,11 +18,11 @@ namespace Repository.Data
 
         public DbSet<Area> Areas { get; set; }
 
-        public DbSet<BaseEntity> BaseEntities { get; set; }
-
         public DbSet<BestPlan> BestPlans { get; set; }
 
         public DbSet<Blog> Blogs { get; set; }
+
+        public DbSet<Brand> Brands { get; set; }
 
         public DbSet<CaseStudy> CaseStudies { get; set; }
 

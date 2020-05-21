@@ -7,6 +7,8 @@ namespace Repository.Models
 {
     public class Agent : BaseEntity
     {
+        public int OrderBy { get; set; }
+
         [Required]
         public string Name { get; set; }
 
