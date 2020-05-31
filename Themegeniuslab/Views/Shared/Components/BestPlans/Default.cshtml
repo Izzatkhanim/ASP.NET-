@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BestPlansViewModel>
+
+    <section class="policy-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                    <div class="section-title-s2">
+                        <span>Our best plans</span>
+                        <h2>Insurance plan for every goal in life</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-xs-12">
+                    <div class="policy-grids">
+                        @foreach (var item in Model)
+                        {
+                            <div class="grid">
+                                <div class="policy-header">
+                                    <h5>@item.PlanName</h5>
+                                    <i class="fi flaticon-umbrella"></i>
+                                </div>
+                                <div class="policy-body">
+                                    <ul>
+                                        <li>@item.PlanDescription1</li>
+                                        <li>@item.PlanDescription2</li>
+                                        <li>@item.PlanDescription3</li>
+                                        <li>@item.PlanDescription4</li>
+                                    </ul>
+                                    <a href="@item.Endpoint" class="theme-btn-s3">@item.ActionText</a>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end container -->
+    </section>

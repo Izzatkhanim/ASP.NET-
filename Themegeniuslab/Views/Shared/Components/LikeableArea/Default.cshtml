@@ -1,0 +1,48 @@
+﻿@model IEnumerable<AreaViewModel>
+
+<section class="cta-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                @foreach (var item in Model)
+                {
+                    <div class="inner clearfix">
+                        <div class="left-col">
+                            <div class="section-title">
+                                <span>Likeable area</span>
+                                <h2>@item.Title</h2>
+                            </div>
+                            <div class="details">
+                                <p>@item.Subtitle</p>
+                            </div>
+                        </div>
+                        <div class="right-col">
+                            <div class="contact-info">
+                                <p>Call us for details</p>
+                                <h2>@item.Phone</h2>
+                                <a href="@item.Endpoint" class="theme-btn-s3">@item.ActionText</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col col-xs-12">
+                @foreach (var item in Model)
+                {
+                    <div class="video-area">
+                        <div class="img-holder">
+                            <img src="images/@item.Image" alt="">
+                            <div class="video-btns">
+                                <a href="@item.Video" class="video-btn" data-type="iframe" tabindex="0"><i class="fi flaticon-play"></i></a>
+                            </div>
+                        </div>
+                        <div class="experience-text">
+                            <p><span>15</span> Years of <br>experience</p>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>

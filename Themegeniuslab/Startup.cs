@@ -10,6 +10,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Repository.Data;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using Repository.Repositories.MainRepository;
+using Repository.Repositories.ServicesRepository;
+using Repository.Repositories.AboutUsRepository;
+using Repository.Repositories.BlogRepository;
+using Repository.Repositories.FAQ;
+using Repository.Repositories.AgenRepository;
 
 namespace Themegeniuslab
 {
@@ -27,9 +34,22 @@ namespace Themegeniuslab
         {
             services.AddControllersWithViews();
 
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddDbContext<ThemegeniuslabDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("Default"),
             x => x.MigrationsAssembly("Repository")));
+
+            services.AddTransient<ITestimonialRepository, TestimonialRepository>();
+            services.AddTransient<ISliderRepository, SliderRepository>();
+            services.AddTransient<IServiceRepository, ServiceRepository>();
+            services.AddTransient<IAboutUsRepository, AboutUsRepository>();
+            services.AddTransient<IBestPlanRepository, BestPlanRepository>();
+            services.AddTransient<IAreaRepository, AreaRepository>();
+            services.AddTransient<IBlogRepository, BlogRepository>();
+            services.AddTransient<IFaqRepository, FaqRepository>();
+            services.AddTransient<IAgentRepository, AgentRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

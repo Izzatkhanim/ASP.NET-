@@ -19,9 +19,12 @@ namespace Repository.Repositories.AboutUsRepository
 
         public IEnumerable<AboutUs> GetAboutUs()
         {
-            return _context.AboutUs.Where(s => s.Status)
-                                   .Include("Setting")
-                                   .ToList();
+            return _context.AboutUs.Where(s => s.Status).ToList();
+        }
+
+        public IEnumerable<AboutUsItem> GetAboutUsItems()
+        {
+            return _context.AboutUsItems.Where(s => s.Status).ToList();
         }
     }
 }

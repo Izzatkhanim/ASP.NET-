@@ -8,5 +8,6 @@ namespace Repository.Repositories.AboutUsRepository
    public interface IAboutUsRepository
     {
         IEnumerable<AboutUs> GetAboutUs();
+        IEnumerable<AboutUsItem> GetAboutUsItems();
     }
 }

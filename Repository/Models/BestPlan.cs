@@ -7,34 +7,27 @@ namespace Repository.Models
 {
     public class BestPlan : BaseEntity
     {
-        [Required]
-        public string Title { get; set; }
-
-        [Required]
-        [MaxLength(50)]
-        public string Subtitle { get; set; }
 
         [Required]
         [MaxLength(50)]
         public string PlanName { get; set; }
 
         [Required]
-        public string PlanLogo { get; set; }
+        public string PlanDescription1 { get; set; }
+        
+        public string PlanDescription2 { get; set; }
+  
+        public string PlanDescription3 { get; set; }
+    
+        public string PlanDescription4 { get; set; }
 
         [Required]
-        public string PlanDescription { get; set; }
+        public string ActionText { get; set; }
 
         [Required]
-        public string Text { get; set; }
+        [MaxLength(200)]
+        public string EndPoint { get; set; }
 
-        [Required]
-        public string SubDescription { get; set; }
-
-        [Required]
-        public string Image { get; set; }
-
-        [Required]
-        public string ImageText { get; set; }
 
 
     }

@@ -14,7 +14,10 @@ namespace Repository.Models
         
         [Required]
         public string Slogan { get; set; }
-   
+
+        [Required]
+        public string ActionText { get; set; }
+
         [Required]
         public string Image { get; set; }
 

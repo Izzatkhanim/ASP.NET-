@@ -9,6 +9,11 @@ using System.Linq;
 
 namespace Repository.Repositories.MainRepository
 {
+    public interface ISettingRepository
+    {
+        IEnumerable<Setting> GetSettings();
+    }
+
     public interface ISliderRepository
     {
         IEnumerable<SliderItem> GetSliderItems();
@@ -32,6 +37,41 @@ namespace Repository.Repositories.MainRepository
     public interface ICategoryRepository
     {
         IEnumerable<Category> GetCategories();
+    }
+
+    public interface IBestPlanRepository
+    {
+        IEnumerable<BestPlan> GetBestPlans();
+    }
+
+    public class BestPlanRepository : IBestPlanRepository
+    {
+        private readonly ThemegeniuslabDbContext _context;
+
+        public BestPlanRepository(ThemegeniuslabDbContext context)
+        {
+            _context = context;
+        }
+
+        public IEnumerable<BestPlan> GetBestPlans()
+        {
+            return _context.BestPlans.ToList();
+        }
+    }
+
+    public class SettingRepository : ISettingRepository
+    {
+        private readonly ThemegeniuslabDbContext _context;
+
+        public SettingRepository(ThemegeniuslabDbContext context)
+        {
+            _context = context;
+        }
+
+        public IEnumerable<Setting> GetSettings()
+        {
+            return _context.Settings.ToList();
+        }
     }
 
     public class SliderRepository : ISliderRepository

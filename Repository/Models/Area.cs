@@ -11,8 +11,12 @@ namespace Repository.Models
         public string Title { get; set; }
 
         [Required]
-        [MaxLength(100)]
+        [MaxLength(1000)]
         public string Subtitle { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        public string ActionText { get; set; }
 
         public string Phone { get; set; }
 
@@ -24,5 +28,8 @@ namespace Repository.Models
 
         [Required]
         public string Video { get; set; }
+
+        [Required]
+        public string Endpoint { get; set; }
     }
 }

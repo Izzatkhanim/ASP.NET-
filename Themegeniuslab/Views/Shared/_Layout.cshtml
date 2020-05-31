@@ -84,21 +84,21 @@
                         <li class="menu-item-has-children">
                             <a href="#">Pages</a>
                             <ul class="sub-menu">
-                                <li><a href="about.html">About us</a></li>
-                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a asp-controller="about" asp-action="index">About us</a></li>
+                                <li><a asp-controller="contact" asp-action="index">Contact us</a></li>
                                 <li><a href="awards.html">Awards</a></li>
                                 <li><a href="pricing-plan.html">Pricing plan</a></li>
                                 <li><a href="testimonials.html">Testimonials</a></li>
                                 <li><a href="testimonials-s2.html">Testimonials style 2</a></li>
                                 <li><a href="team.html">Team</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a asp-controller="faq" asp-action="index">FAQ</a></li>
                                 <li><a href="404.html">404</a></li>
                             </ul>
                         </li>
                         <li class="menu-item-has-children">
                             <a href="#">Services</a>
                             <ul class="sub-menu">
-                                <li><a href="services.html">Services</a></li>
+                                <li><a asp-controller="services" asp-action="index">Services</a></li>
                                 <li><a href="services-s2.html">Services style 2</a></li>
                                 <li><a href="service-single.html">Life insurance</a></li>
                                 <li><a href="car-insurance.html">Car insurance</a></li>
@@ -111,7 +111,7 @@
                         <li class="menu-item-has-children">
                             <a href="#">Case studies</a>
                             <ul class="sub-menu">
-                                <li><a href="case-studies.html">Case studies</a></li>
+                                <li><a asp-controller="CaseStudy" asp-action="index">Case studies</a></li>
                                 <li><a href="case-single.html">Case studies single</a></li>
                             </ul>
                         </li>
@@ -121,7 +121,7 @@
                                 <li class="menu-item-has-children">
                                     <a href="#Level3">Blog listing</a>
                                     <ul class="sub-menu">
-                                        <li><a href="blog.html">Right sidebar</a></li>
+                                        <li><a asp-controller="Blog" asp-action="index">Right sidebar</a></li>
                                         <li><a href="blog-left-sidebar.html">Left sidebar</a></li>
                                         <li><a href="blog-fullwidth.html">Full width</a></li>
                                     </ul>
@@ -147,14 +147,14 @@
                                 <li class="menu-item-has-children">
                                     <a href="#Level3">Blog single</a>
                                     <ul class="sub-menu">
-                                        <li><a href="blog-single.html">Right sidebar</a></li>
+                                        <li><a asp-controller="BlogSingle" asp-action="index">Right sidebar</a></li>
                                         <li><a href="blog-single-left-sidebar.html">Left sidebar</a></li>
                                         <li><a href="blog-single-full-width.html">Full width</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a asp-controller="contact" asp-action="index">Contact</a></li>
                     </ul>
                 </div><!-- end of nav-collapse -->
 
@@ -186,7 +186,7 @@
     </header>
 
 
-    @RenderBody()
+    @RenderBody();
 
 
 

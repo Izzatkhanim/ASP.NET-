@@ -11,9 +11,24 @@ namespace Repository.Models
         public string Title { get; set; }
 
         [Required]
+        public string SecondaryTitle { get; set; }
+
+        [Required]
         public string Image { get; set; }
 
         [Required]
-        public string Text { get; set; }
+        public string Text1 { get; set; }
+
+        [Required]
+        public string Text2 { get; set; }
+
+        [Required]
+        public string SecondaryText { get; set; }
+
+        [Required]
+        public string ActionText { get; set; }
+
+        [Required]
+        public string Endpoint { get; set; }
     }
 }

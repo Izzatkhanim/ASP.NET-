@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BlogViewModel>
+
+    <section class="blog-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12">
+                    <div class="content-area">
+                        @foreach (var item in Model)
+                        {
+                            <div class="left-col">
+                                <div class="section-title-s3">
+                                    <span>From our blog</span>
+                                    <h2>Industry knowledge</h2>
+                                    <p>@item.Text1</p>
+                                </div>
+                                <div class="blog-post-w-media post">
+                                    <div class="entry-media">
+                                        <img src="images/blog/@item.Image" alt="">
+                                    </div>
+                                    <p class="cat"><i class="fi flaticon-tag-1"></i> Insurance, company</p>
+                                    <h3><a href="#">@item.Title</a></h3>
+                                    <p class="text">@item.Text2</p>
+                                    <a href="@item.Endpoint" class="theme-btn">@item.ActionText</a>
+                                </div>
+                            </div>
+                        }
+                        @foreach (var item in Model)
+                        {
+                            <div class="right-col">
+
+                                <div class="post">
+                                    <p class="cat"><i class="fi flaticon-tag-1"></i> Insurance, company</p>
+                                    <h3><a href="#">@item.SecondaryTitle</a></h3>
+                                    <p class="text">@item.SecondaryText</p>
+                                    <a href="#" class="read-more">@item.ActionText</a>
+                                </div>                             
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end container -->
+    </section>
